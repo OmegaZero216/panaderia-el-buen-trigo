@@ -68,6 +68,8 @@ public:
      * @return true si se guardó correctamente.
      */
     bool guardarEnArchivo(const std::string& rutaArchivo) const;
+
+    const std::vector<Producto>& getProductos() const { return productos; }
 };
 
 #endif // STOCK_H
