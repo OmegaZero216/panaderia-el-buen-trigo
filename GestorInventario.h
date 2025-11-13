@@ -19,9 +19,12 @@ public:
     void eliminarIngrediente();
     void reabastecerIngrediente();
 
-    // Funciones relacionadas a stock de productos
+    // Funciones relacionadas al stock
     void mostrarStock() const;
     void mostrarAgotados() const;
+
+    // Vista / menú interno
+    void menuInventario();
 };
 
 #endif //GESTOR_INVENTARIO_H
