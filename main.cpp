@@ -1,56 +1,67 @@
 #include <iostream>
-#include "Ingrediente.h"
 #include "Inventario.h"
-#include "Receta.h"
-#include "Producto.h"
 #include "Stock.h"
 #include "Produccion.h"
-#include "Reportes.h"
-
-using namespace std;
+#include "Panadero.h"
+#include "GestorInventario.h"
+#include "Administrador.h"
 
 int main() {
-    system("clear"); // En Windows puedes usar system("cls");
-    cout << "=============================\n";
-    cout << "🌾 PANADERÍA EL BUEN TRIGO 🌾\n";
-    cout << "=============================\n\n";
-
-    // --- Inicialización de componentes ---
+    // ================================
+    //     CREACIÓN DE LOS MODELOS
+    // ================================
     Inventario inventario;
     Stock stock;
-
-    // Cargar datos iniciales desde archivos
-    inventario.cargarDesdeArchivo("data/inventario.txt");
-    stock.cargarDesdeArchivo("data/stock.txt");
-
-    // Cargar receta desde archivo
-    Receta recetaPanBlanco;
-    recetaPanBlanco.cargarDesdeArchivo("data/recetas.txt", "Pan Blanco");
-
-    // --- Mostrar datos iniciales ---
-    cout << "\n📋 Estado inicial del sistema:\n";
-    inventario.mostrarInventario();
-    stock.mostrarStock();
-
-    // --- Producción ---
     Produccion produccion(&inventario, &stock);
 
-    int cantidad;
-    cout << "\n👨‍🍳 ¿Cuántos panes blancos desea producir hoy?: ";
-    cin >> cantidad;
+    // Archivo maestro del recetario
+    std::string rutaRecetario = "data/recetas.txt";
 
-    produccion.fabricarProducto(recetaPanBlanco, cantidad);
+    // ================================
+    //     CREACIÓN DE LAS VISTAS
+    // ================================
+    Panadero panadero(&produccion, rutaRecetario);
+    GestorInventario gestor(&inventario, &stock);
+    Administrador admin(&inventario, &stock);
 
-    // --- Guardar cambios ---
-    inventario.guardarEnArchivo("data/inventario.txt");
-    stock.guardarEnArchivo("data/stock.txt");
+    // ================================
+    //     MENÚ PRINCIPAL DEL SISTEMA
+    // ================================
+    int opcion = -1;
 
-    // --- Reportes finales ---
-    Reportes reportes(&inventario, &stock);
-    reportes.reporteCierreAnual();
+    while (opcion != 0) {
+        std::cout << "\n====================================\n";
+        std::cout << "       SISTEMA 'EL BUEN TRIGO'      \n";
+        std::cout << "====================================\n";
+        std::cout << "1. Módulo Panadero\n";
+        std::cout << "2. Módulo Gestor de Inventario\n";
+        std::cout << "3. Módulo Administrador\n";
+        std::cout << "0. Salir\n";
+        std::cout << "Seleccione una opción: ";
+        std::cin >> opcion;
 
-    cout << "\n🌾 ¡Gracias por usar El Buen Trigo! 🌾\n";
-    cout << "=======================================\n";
+        switch (opcion) {
+            case 1:
+                panadero.menuPanadero();
+                break;
+
+           case 2:
+                gestor.menuInventario();
+                break;
+            
+            case 3:
+                admin.mostrarMenu();
+                break;
+
+            case 0:
+                std::cout << "Gracias por usar el sistema. ¡Hasta pronto!\n";
+                break;
+
+            default:
+                std::cout << "Opción inválida.\n";
+        }
+    }
 
     return 0;
 }
+
