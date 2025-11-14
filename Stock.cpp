@@ -11,25 +11,25 @@ void Stock::agregarProducto(const Producto& producto) {
     for (auto& p : productos) {
         if (p.getNombre() == producto.getNombre()) {
             p.modificarCantidad(producto.getCantidad());
-            std::cout << "🔄 Producto \"" << producto.getNombre() 
+            std::cout << " Producto \"" << producto.getNombre() 
                       << "\" actualizado en el stock.\n";
             return;
         }
     }
 
     productos.push_back(producto);
-    std::cout << "✅ Producto \"" << producto.getNombre() << "\" agregado al stock.\n";
+    std::cout << " Producto \"" << producto.getNombre() << "\" agregado al stock.\n";
 }
 
 bool Stock::eliminarProducto(const std::string& nombre) {
     for (auto it = productos.begin(); it != productos.end(); ++it) {
         if (it->getNombre() == nombre) {
             productos.erase(it);
-            std::cout << "🗑️ Producto \"" << nombre << "\" eliminado del stock.\n";
+            std::cout << " Producto \"" << nombre << "\" eliminado del stock.\n";
             return true;
         }
     }
-    std::cout << "⚠️ Producto \"" << nombre << "\" no encontrado.\n";
+    std::cout << " Producto \"" << nombre << "\" no encontrado.\n";
     return false;
 }
 
@@ -43,7 +43,7 @@ Producto* Stock::buscarProducto(const std::string& nombre) {
 
 void Stock::mostrarStock() const {
     if (productos.empty()) {
-        std::cout << "📦 No hay productos en stock.\n";
+        std::cout << " No hay productos en stock.\n";
         return;
     }
 
@@ -57,7 +57,7 @@ void Stock::mostrarStock() const {
 
 void Stock::mostrarAgotados() const {
     bool hayAgotados = false;
-    std::cout << "\n🚨 PRODUCTOS AGOTADOS 🚨\n";
+    std::cout << "\n PRODUCTOS AGOTADOS \n";
     for (const auto& p : productos) {
         if (p.getCantidad() == 0) {
             std::cout << "- " << p.getNombre() << std::endl;
@@ -66,7 +66,7 @@ void Stock::mostrarAgotados() const {
     }
 
     if (!hayAgotados)
-        std::cout << "✅ No hay productos agotados.\n";
+        std::cout << " No hay productos agotados.\n";
 
     std::cout << "--------------------------\n";
 }
@@ -76,7 +76,7 @@ void Stock::mostrarAgotados() const {
 bool Stock::cargarDesdeArchivo(const std::string& rutaArchivo) {
     std::ifstream archivo(rutaArchivo);
     if (!archivo.is_open()) {
-        std::cout << "⚠️ No se pudo abrir el archivo de stock: " << rutaArchivo << "\n";
+        std::cout << " No se pudo abrir el archivo de stock: " << rutaArchivo << "\n";
         return false;
     }
 
@@ -90,14 +90,14 @@ bool Stock::cargarDesdeArchivo(const std::string& rutaArchivo) {
     }
 
     archivo.close();
-    std::cout << "📥 Stock cargado correctamente desde \"" << rutaArchivo << "\".\n";
+    std::cout << " Stock cargado correctamente desde \"" << rutaArchivo << "\".\n";
     return true;
 }
 
 bool Stock::guardarEnArchivo(const std::string& rutaArchivo) const {
     std::ofstream archivo(rutaArchivo);
     if (!archivo.is_open()) {
-        std::cout << "⚠️ No se pudo guardar el archivo de stock: " << rutaArchivo << "\n";
+        std::cout << " No se pudo guardar el archivo de stock: " << rutaArchivo << "\n";
         return false;
     }
 
@@ -107,6 +107,6 @@ bool Stock::guardarEnArchivo(const std::string& rutaArchivo) const {
     }
 
     archivo.close();
-    std::cout << "💾 Stock guardado correctamente en \"" << rutaArchivo << "\".\n";
+    std::cout << " Stock guardado correctamente en \"" << rutaArchivo << "\".\n";
     return true;
 }
