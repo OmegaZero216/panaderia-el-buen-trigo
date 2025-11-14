@@ -15,7 +15,7 @@ Panadero::Panadero(Produccion* prod, const std::string& rutaRecetario)
 void Panadero::mostrarRecetario() const {
     std::ifstream archivo(rutaRecetario);
     if (!archivo.is_open()) {
-        std::cout << "No se pudo abrir el archivo del recetario.\n";
+        std::cout << " No se pudo abrir el archivo del recetario.\n";
         return;
     }
 
