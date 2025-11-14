@@ -2,7 +2,7 @@
  * @file Inventario.cpp
  * @brief Implementación de la clase Inventario.
  * @details Este archivo contiene las definiciones de los métodos de la clase Inventario,
- * encargada de gestionar la colección de objetos Ingrediente (CRUD y búsqueda),
+ * encargada de gestionar la colección de objetos Ingrediente (adición, eliminación, modificación y consulta), y búsqueda,
  * mostrar alertas de bajo stock y manejar la persistencia de datos (guardar y cargar).
  * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
  * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
