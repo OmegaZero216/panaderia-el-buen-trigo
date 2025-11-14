@@ -1,3 +1,15 @@
+/**
+ * @file Administrador.cpp
+ * @brief Implementación de la clase Administrador.
+ * @details Este archivo contiene las definiciones de los métodos de la clase Administrador,
+ * utilizados para generar diversos reportes sobre el estado del Inventario y el Stock
+ * (Reporte de inventario, Reporte de stock, Reporte porcentual y Reporte de cierre anual).
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 2.0
+ */
+
 #include "Administrador.h"
 #include <iostream>
 #include <iomanip>
