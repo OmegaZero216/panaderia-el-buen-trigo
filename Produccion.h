@@ -1,3 +1,15 @@
+/**
+ * @file Produccion.h
+ * @brief Definición de la interfaz de la clase Produccion.
+ * @details Este archivo contiene la declaración de la clase Produccion, que coordina
+ * la lógica de fabricación de productos, verificando recursos en el Inventario,
+ * y actualizando el Stock con el producto terminado, basándose en una Receta.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #ifndef PRODUCCION_H
 #define PRODUCCION_H
 
