@@ -8,18 +8,18 @@ Inventario::Inventario() {}
 
 void Inventario::agregarIngrediente(const Ingrediente& ingr) {
     ingredientes.push_back(ingr);
-    std::cout << "✅ Ingrediente \"" << ingr.getNombre() << "\" agregado al inventario.\n";
+    std::cout << " Ingrediente \"" << ingr.getNombre() << "\" agregado al inventario.\n";
 }
 
 bool Inventario::eliminarIngrediente(const std::string& nombre) {
     for (auto it = ingredientes.begin(); it != ingredientes.end(); ++it) {
         if (it->getNombre() == nombre) {
             ingredientes.erase(it);
-            std::cout << "🗑️ Ingrediente \"" << nombre << "\" eliminado.\n";
+            std::cout << " Ingrediente \"" << nombre << "\" eliminado.\n";
             return true;
         }
     }
-    std::cout << "⚠️ Ingrediente \"" << nombre << "\" no encontrado.\n";
+    std::cout << " Ingrediente \"" << nombre << "\" no encontrado.\n";
     return false;
 }
 
@@ -34,7 +34,7 @@ Ingrediente* Inventario::buscarIngrediente(const std::string& nombre) {
 
 void Inventario::mostrarInventario() const {
     if (ingredientes.empty()) {
-        std::cout << "📦 Inventario vacío.\n";
+        std::cout << " Inventario vacío.\n";
         return;
     }
 
@@ -47,7 +47,7 @@ void Inventario::mostrarInventario() const {
 
 void Inventario::mostrarAlertas() const {
     bool hayAlertas = false;
-    std::cout << "\n🚨 INGREDIENTES CON BAJO STOCK 🚨\n";
+    std::cout << "\n INGREDIENTES CON BAJO STOCK \n";
     for (const auto& ingr : ingredientes) {
         if (ingr.necesitaReposicion()) {
             ingr.mostrar();
@@ -55,7 +55,7 @@ void Inventario::mostrarAlertas() const {
         }
     }
     if (!hayAlertas)
-        std::cout << "✅ Todos los ingredientes están en niveles adecuados.\n";
+        std::cout << " Todos los ingredientes están en niveles adecuados.\n";
     std::cout << "----------------------------------\n";
 }
 
@@ -64,7 +64,7 @@ void Inventario::mostrarAlertas() const {
 bool Inventario::cargarDesdeArchivo(const std::string& rutaArchivo) {
     std::ifstream archivo(rutaArchivo);
     if (!archivo.is_open()) {
-        std::cout << "⚠️ No se pudo abrir el archivo de inventario: " << rutaArchivo << "\n";
+        std::cout << " No se pudo abrir el archivo de inventario: " << rutaArchivo << "\n";
         return false;
     }
 
@@ -78,14 +78,14 @@ bool Inventario::cargarDesdeArchivo(const std::string& rutaArchivo) {
     }
 
     archivo.close();
-    std::cout << "📥 Inventario cargado correctamente desde \"" << rutaArchivo << "\".\n";
+    std::cout << " Inventario cargado correctamente desde \"" << rutaArchivo << "\".\n";
     return true;
 }
 
 bool Inventario::guardarEnArchivo(const std::string& rutaArchivo) const {
     std::ofstream archivo(rutaArchivo);
     if (!archivo.is_open()) {
-        std::cout << "⚠️ No se pudo guardar el archivo de inventario: " << rutaArchivo << "\n";
+        std::cout << " No se pudo guardar el archivo de inventario: " << rutaArchivo << "\n";
         return false;
     }
 
@@ -97,6 +97,6 @@ bool Inventario::guardarEnArchivo(const std::string& rutaArchivo) const {
     }
 
     archivo.close();
-    std::cout << "💾 Inventario guardado correctamente en \"" << rutaArchivo << "\".\n";
+    std::cout << " Inventario guardado correctamente en \"" << rutaArchivo << "\".\n";
     return true;
 }
