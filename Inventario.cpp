@@ -38,7 +38,7 @@ void Inventario::mostrarInventario() const {
         return;
     }
 
-    std::cout << "\n=== INVENTARIO DE INGREDIENTES ===\n";
+    std::cout << "\n === INVENTARIO DE INGREDIENTES ===\n";
     for (const auto& ingr : ingredientes) {
         ingr.mostrar();
     }
