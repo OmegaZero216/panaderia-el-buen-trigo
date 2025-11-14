@@ -40,6 +40,6 @@ void Ingrediente::mostrar() const {
               << " | Nivel mínimo: " << nivelMinimo << " " << unidad;
 
     if (necesitaReposicion())
-        std::cout << " ⚠️ [BAJO STOCK]";
+        std::cout << " [BAJO STOCK]";
     std::cout << std::endl;
 }
