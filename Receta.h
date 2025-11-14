@@ -1,3 +1,15 @@
+/**
+ * @file Receta.h
+ * @brief Definición de la interfaz de la clase Receta.
+ * @details Este archivo contiene la declaración de la clase Receta, que modela
+ * la composición de los productos finales, detallando los ingredientes necesarios
+ * y sus cantidades. También incluye métodos para la persistencia de recetas en archivos.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #ifndef RECETA_H
 #define RECETA_H
 
