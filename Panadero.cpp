@@ -1,3 +1,15 @@
+/**
+ * @file Panadero.cpp
+ * @brief Implementación de la clase Panadero.
+ * @details Este archivo contiene las definiciones de los métodos de la clase Panadero,
+ * que gestiona las operaciones del recetario (mostrar, agregar, eliminar, modificar recetas)
+ * y la función principal de producción, mandando la fabricación a la clase Produccion.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #include "Panadero.h"
 #include <iostream>
 #include <fstream>
