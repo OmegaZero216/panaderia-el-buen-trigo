@@ -1,3 +1,15 @@
+/**
+ * @file Stock.h
+ * @brief Definición de la interfaz de la clase Stock.
+ * @details Este archivo contiene la declaración de la clase Stock, que modela
+ * la colección de productos terminados, permitiendo su gestión (adición,
+ * eliminación, búsqueda) y la persistencia de los datos en archivos.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #ifndef STOCK_H
 #define STOCK_H
 
