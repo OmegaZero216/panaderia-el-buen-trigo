@@ -19,7 +19,7 @@ void Panadero::mostrarRecetario() const {
         return;
     }
 
-    std::cout << "\n📖 === RECETARIO ===\n";
+    std::cout << "\n === RECETARIO ===\n";
 
     std::string nombreRec, nombreIng;
     double cant;
@@ -27,7 +27,7 @@ void Panadero::mostrarRecetario() const {
 
     while (archivo >> std::quoted(nombreRec) >> std::quoted(nombreIng) >> cant) {
         if (nombreRec != ultimo) {
-            std::cout << "\n🍞 " << nombreRec << ":\n";
+            std::cout << "\n " << nombreRec << ":\n";
             ultimo = nombreRec;
         }
         std::cout << "   - " << nombreIng << ": " << cant << "\n";
