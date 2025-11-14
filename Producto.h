@@ -1,3 +1,15 @@
+/**
+ * @file Producto.h
+ * @brief Definición de la interfaz de la clase Producto.
+ * @details Este archivo contiene la declaración de la clase Producto, que modela
+ * los ítems terminados en stock. Gestiona la cantidad disponible, su receta base
+ * y provee métodos para la persistencia de sus datos en archivos.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #ifndef PRODUCTO_H
 #define PRODUCTO_H
 
