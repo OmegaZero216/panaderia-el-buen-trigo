@@ -1,3 +1,16 @@
+/**
+ * @file Producto.cpp
+ * @brief Implementación de la clase Producto.
+ * @details Este archivo contiene las definiciones de los constructores y métodos de la clase Producto,
+ * la cual representa un ítem terminado listo para la venta. Contiene la cantidad en stock,
+ * su nombre y una referencia a la receta utilizada para su fabricación, además de métodos
+ * para persistencia en archivos.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #include "Producto.h"
 #include <fstream>
 #include <iomanip>
