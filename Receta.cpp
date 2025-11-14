@@ -10,7 +10,7 @@ Receta::Receta(const std::string& nombreReceta)
 
 void Receta::agregarIngrediente(const std::string& nombreIng, double cantidad) {
     ingredientesNecesarios.push_back({nombreIng, cantidad});
-    std::cout << "🧾 Ingrediente \"" << nombreIng
+    std::cout << " Ingrediente \"" << nombreIng
               << "\" agregado a la receta \"" << nombre << "\" ("
               << cantidad << " unidades requeridas).\n";
 }
@@ -18,7 +18,7 @@ void Receta::agregarIngrediente(const std::string& nombreIng, double cantidad) {
 void Receta::mostrarReceta() const {
     std::cout << "\n=== RECETA: " << nombre << " ===\n";
     if (ingredientesNecesarios.empty()) {
-        std::cout << "⚠️ No hay ingredientes en esta receta.\n";
+        std::cout << " No hay ingredientes en esta receta.\n";
         return;
     }
 
@@ -39,7 +39,7 @@ const std::vector<std::pair<std::string, double>>& Receta::getIngredientes() con
 bool Receta::guardarEnArchivo(const std::string& rutaArchivo) const {
     std::ofstream archivo(rutaArchivo, std::ios::app); // modo append para no sobrescribir
     if (!archivo.is_open()) {
-        std::cout << "⚠️ No se pudo abrir el archivo de recetas: " << rutaArchivo << "\n";
+        std::cout << " No se pudo abrir el archivo de recetas: " << rutaArchivo << "\n";
         return false;
     }
 
@@ -51,14 +51,14 @@ bool Receta::guardarEnArchivo(const std::string& rutaArchivo) const {
     }
 
     archivo.close();
-    std::cout << "💾 Receta \"" << nombre << "\" guardada en " << rutaArchivo << ".\n";
+    std::cout << " Receta \"" << nombre << "\" guardada en " << rutaArchivo << ".\n";
     return true;
 }
 
 bool Receta::cargarDesdeArchivo(const std::string& rutaArchivo, const std::string& nombreReceta) {
     std::ifstream archivo(rutaArchivo);
     if (!archivo.is_open()) {
-        std::cout << "⚠️ No se pudo abrir el archivo de recetas: " << rutaArchivo << "\n";
+        std::cout << " No se pudo abrir el archivo de recetas: " << rutaArchivo << "\n";
         return false;
     }
 
@@ -77,10 +77,10 @@ bool Receta::cargarDesdeArchivo(const std::string& rutaArchivo, const std::strin
     archivo.close();
     if (encontrada) {
         nombre = nombreReceta;
-        std::cout << "📥 Receta \"" << nombre << "\" cargada correctamente.\n";
+        std::cout << " Receta \"" << nombre << "\" cargada correctamente.\n";
         return true;
     } else {
-        std::cout << "⚠️ No se encontró la receta \"" << nombreReceta << "\" en el archivo.\n";
+        std::cout << " No se encontró la receta \"" << nombreReceta << "\" en el archivo.\n";
         return false;
     }
 }
