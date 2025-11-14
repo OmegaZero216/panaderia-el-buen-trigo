@@ -1,3 +1,16 @@
+/**
+ * @file Produccion.cpp
+ * @brief Implementación de la clase Produccion.
+ * @details Este archivo contiene las definiciones de los métodos de la clase Produccion,
+ * encargada de verificar la disponibilidad de ingredientes de una Receta,
+ * consumir dichos ingredientes del Inventario y, finalmente, actualizar el Stock
+ * con la cantidad de producto terminado.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #include "Produccion.h"
 
 Produccion::Produccion(Inventario* inv, Stock* st)
