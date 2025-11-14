@@ -1,3 +1,15 @@
+/**
+ * @file GestorInventario.cpp
+ * @brief Implementación de la clase GestorInventario.
+ * @details Este archivo contiene las definiciones de los métodos de la clase GestorInventario,
+ * utilizados para manejar las operaciones del Inventario (agregar, eliminar, reabastecer)
+ * y para mostrar la información del Inventario y del Stock.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 2.0
+ */
+
 #include "GestorInventario.h"
 #include <iostream>
 
