@@ -10,11 +10,11 @@ bool Produccion::verificarDisponibilidad(const Receta& recetaBase, int cantidad)
 
         Ingrediente* ing = inventario->buscarIngrediente(nombreIng);
         if (!ing) {
-            std::cout << "❌ Ingrediente \"" << nombreIng << "\" no existe en inventario.\n";
+            std::cout << " Ingrediente \"" << nombreIng << "\" no existe en inventario.\n";
             return false;
         }
         if (ing->getCantidad() < requerido) {
-            std::cout << "⚠️ No hay suficiente \"" << nombreIng
+            std::cout << " No hay suficiente \"" << nombreIng
                       << "\". Se requiere " << requerido
                       << " " << ing->getUnidad()
                       << " y solo hay " << ing->getCantidad() << ".\n";
@@ -25,11 +25,11 @@ bool Produccion::verificarDisponibilidad(const Receta& recetaBase, int cantidad)
 }
 
 void Produccion::fabricarProducto(const Receta& recetaBase, int cantidad) {
-    std::cout << "\n👨‍🍳 Iniciando producción de " << cantidad 
+    std::cout << "\n Iniciando producción de " << cantidad 
               << " unidades de \"" << recetaBase.getNombre() << "\"...\n";
 
     if (!verificarDisponibilidad(recetaBase, cantidad)) {
-        std::cout << "❌ Producción cancelada. Ingredientes insuficientes.\n";
+        std::cout << " Producción cancelada. Ingredientes insuficientes.\n";
         return;
     }
 
@@ -44,19 +44,19 @@ void Produccion::fabricarProducto(const Receta& recetaBase, int cantidad) {
     Producto* prodExistente = stock->buscarProducto(recetaBase.getNombre());
     if (prodExistente) {
         prodExistente->modificarCantidad(cantidad);
-        std::cout << "🔄 Stock de \"" << prodExistente->getNombre()
+        std::cout << " Stock de \"" << prodExistente->getNombre()
                   << "\" actualizado a " << prodExistente->getCantidad() << " unidades.\n";
     } else {
         Producto nuevo(recetaBase.getNombre(), recetaBase, cantidad);
         stock->agregarProducto(nuevo);
     }
 
-    std::cout << "✅ Producción completada con éxito.\n";
+    std::cout << " Producción completada con éxito.\n";
     mostrarResumen(recetaBase, cantidad);
 }
 
 void Produccion::mostrarResumen(const Receta& recetaBase, int cantidad) const {
-    std::cout << "\n=== RESUMEN DE PRODUCCIÓN ===\n";
+    std::cout << "\n === RESUMEN DE PRODUCCIÓN ===\n";
     std::cout << "Producto: " << recetaBase.getNombre() << "\n";
     std::cout << "Cantidad producida: " << cantidad << "\n";
     std::cout << "Ingredientes utilizados:\n";
