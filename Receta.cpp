@@ -1,3 +1,15 @@
+/**
+ * @file Receta.cpp
+ * @brief Implementación de la clase Receta.
+ * @details Este archivo contiene las definiciones de los constructores y métodos de la clase Receta,
+ * la cual define la lista de ingredientes y cantidades necesarias para fabricar un producto,
+ * así como la funcionalidad para cargar y guardar la información del recetario en archivos.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #include "Receta.h"
 #include <fstream>
 #include <iomanip>   // std::quoted
