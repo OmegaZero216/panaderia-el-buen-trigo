@@ -7,7 +7,7 @@
  * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
  * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
  * @date 2025-11-13
- * @version 2.0
+ * @version 1.0
  */
 
 #include "Ingrediente.h"
