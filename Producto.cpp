@@ -24,7 +24,7 @@ void Producto::modificarCantidad(int delta) {
 }
 
 void Producto::mostrar() const {
-    std::cout << "\n🥐 PRODUCTO: " << nombre
+    std::cout << "\n PRODUCTO: " << nombre
               << "\nCantidad en stock: " << cantidad
               << "\nReceta base:";
     recetaBase.mostrarReceta();
@@ -33,7 +33,7 @@ void Producto::mostrar() const {
 bool Producto::guardarEnArchivo(const std::string& rutaArchivo) const {
     std::ofstream archivo(rutaArchivo, std::ios::app);
     if (!archivo.is_open()) {
-        std::cout << "⚠️ No se pudo abrir el archivo de productos: " << rutaArchivo << "\n";
+        std::cout << " No se pudo abrir el archivo de productos: " << rutaArchivo << "\n";
         return false;
     }
 
@@ -41,14 +41,14 @@ bool Producto::guardarEnArchivo(const std::string& rutaArchivo) const {
             << cantidad << "\n";
 
     archivo.close();
-    std::cout << "💾 Producto \"" << nombre << "\" guardado en " << rutaArchivo << ".\n";
+    std::cout << " Producto \"" << nombre << "\" guardado en " << rutaArchivo << ".\n";
     return true;
 }
 
 bool Producto::cargarDesdeArchivo(const std::string& rutaArchivo, const std::string& nombreProducto) {
     std::ifstream archivo(rutaArchivo);
     if (!archivo.is_open()) {
-        std::cout << "⚠️ No se pudo abrir el archivo de productos: " << rutaArchivo << "\n";
+        std::cout << " No se pudo abrir el archivo de productos: " << rutaArchivo << "\n";
         return false;
     }
 
@@ -67,10 +67,10 @@ bool Producto::cargarDesdeArchivo(const std::string& rutaArchivo, const std::str
 
     archivo.close();
     if (encontrada) {
-        std::cout << "📥 Producto \"" << nombre << "\" cargado correctamente.\n";
+        std::cout << " Producto \"" << nombre << "\" cargado correctamente.\n";
         return true;
     } else {
-        std::cout << "⚠️ No se encontró el producto \"" << nombreProducto << "\" en el archivo.\n";
+        std::cout << " No se encontró el producto \"" << nombreProducto << "\" en el archivo.\n";
         return false;
     }
 }
