@@ -1,3 +1,15 @@
+/**
+ * @file Ingrediente.cpp
+ * @brief Implementación de la clase Ingrediente.
+ * @details Este archivo contiene las definiciones de los constructores y métodos de la clase Ingrediente,
+ * la cual representa un ítem individual dentro del inventario, gestionando su cantidad, unidad,
+ * nombre y el nivel mínimo para alertar sobre la necesidad de reposición.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 2.0
+ */
+
 #include "Ingrediente.h"
 
 // Constructor por defecto
