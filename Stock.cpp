@@ -1,3 +1,16 @@
+/**
+ * @file Stock.cpp
+ * @brief Implementación de la clase Stock.
+ * @details Este archivo contiene las definiciones de los métodos de la clase Stock,
+ * que administra la colección de objetos Producto, gestionando su adición,
+ * eliminación y búsqueda, además de mostrar el estado actual de los productos
+ * terminados y manejar la persistencia de datos en archivos.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #include "Stock.h"
 #include <fstream>
 #include <iomanip> // std::quoted
