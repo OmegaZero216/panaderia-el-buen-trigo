@@ -71,7 +71,7 @@ void GestorInventario::reabastecerIngrediente() {
         return;
     }
 
-    ing->agregar(cant);
+    ing->modificarCantidad(cant);
     std::cout << "Reabastecido correctamente.\n";
 }
 
