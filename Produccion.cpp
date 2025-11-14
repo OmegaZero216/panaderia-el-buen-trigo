@@ -50,7 +50,7 @@ void Produccion::fabricarProducto(const Receta& recetaBase, int cantidad) {
     for (const auto& par : recetaBase.getIngredientes()) {
         Ingrediente* ing = inventario->buscarIngrediente(par.first);
         double requerido = par.second * cantidad;
-        ing->consumir(requerido);
+        ing->modificarCantidad(requerido);
     }
 
     // Crear o actualizar producto en el stock
