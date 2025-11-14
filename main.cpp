@@ -1,3 +1,16 @@
+/**
+ * @file main.cpp
+ * @brief Punto de entrada del sistema de gestión de panadería 'El Buen Trigo'.
+ * @details Este archivo inicializa las clases principales del sistema (Inventario, Stock, Produccion)
+ * y las clases de interfaz de usuario (Panadero, GestorInventario, Administrador).
+ * Contiene el bucle principal del menú de navegación que permite al usuario acceder
+ * a los diferentes módulos.
+ * @author [Sara Gonzalez, Evan Arregoces, Lissette Patiño, Margareth Gamboa, Luvian Parra]
+ * @mail [sara.michelle.gonzalez@correounivalle.edu.co, evan.arregoces@correounivalle.edu.co, lissette.patino@correounivalle.edu.co, margareth.gamboa@correounivalle.edu.co, luvian.parra@correounivalle.edu.co]
+ * @date 2025-11-13
+ * @version 1.0
+ */
+
 #include <iostream>
 #include "Inventario.h"
 #include "Stock.h"
